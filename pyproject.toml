@@ -1,0 +1,36 @@
+[project]
+name = "alize"
+version = "5.0.0"
+description = "Alize - une version francaise de Python (133 mots-cles et fonctions traduits)"
+readme = "README.md"
+requires-python = ">=3.9"
+license-files = ["LICENSE"]
+authors = [{ name = "Alize" }]
+keywords = ["french", "python", "transpiler", "education", "francais"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Natural Language :: French",
+    "Topic :: Education",
+    "Topic :: Software Development :: Interpreters",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/celtmen-cpu/alize"
+Documentation = "https://github.com/celtmen-cpu/alize#readme"
+
+[project.scripts]
+alize = "alize.main:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "build"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["alize*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
